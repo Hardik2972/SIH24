@@ -16,34 +16,44 @@ const Header = () => {
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to top right, rgba(255, 255, 255, 1) 10%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.4) 100%)',
+          background: 'linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5))',
         }}
       ></div>
 
 
       {/* Content overlaid */}
       <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-12">
-        <div className="text-white font-bold text-lg md:text-3xl">
+        <div className="text-white font-bold text-lg md:text-sm">
           <img
             src="/Group.png"
             alt="Museum of Illusions Logo"
-            className="h-16 md:h-20 mb-4"
+            className="h-48 md:h-32 mb-4"
           />
-          <p>New Delhi</p>
-          <p>A Block, 30-33 1st Floor, Rajiv Chowk, Connaught Place, New Delhi, Delhi 110001, India</p>
-          <p className="text-sm md:text-base mt-2">Monday - Sunday | 10:00 AM - 9:00 PM</p>
-        </div>
-        <div className="absolute top-4 right-4 flex space-x-4">
-          <div className="bg-green-500 text-white py-1 px-3 rounded-lg shadow-md">
-            4.2 REVIEWS
+          <div className="flex justify-center">
+            <div className="text-left">
+            <p className="text-slate-600">New Delhi</p>
+            <p className="w-80">A Block, 30-33 1st Floor, Rajiv Chowk, Connaught Place, Delhi-110001, India</p>
+            </div>
+
+            <div className="text-left">
+            <p className="text-sm md:text-base mt-2">Monday - Sunday</p>
+            <p className="text-slate-700">10:00 AM - 9:00 PM</p>
+            </div>
           </div>
-          <div className="bg-black text-white py-1 px-3 rounded-lg shadow-md">
-            6 PHOTOS
-          </div>
         </div>
-        <div className="absolute bottom-4 right-4 bg-white bg-opacity-50 text-black py-1 px-3 rounded-lg shadow-md">
-          Prices are Exclusive of GST, 18% Extra
+      </div>
+
+      <div className="flex flex-col space-y-4 mr-[-48px] z-50">
+        <div className="bg-[#4AB425] py-4 px-3 rounded-l-lg shadow-md text-[#FFFFFF]">
+          4.2 REVIEWS
         </div>
+        <div className="bg-black py-4 px-3 rounded-l-lg shadow-md text-[#FFFFFF]">
+          6 PHOTOS
+        </div>
+      </div>
+      
+      <div className="absolute bottom-4 right-16 bg-[#F0EBEB] text-black py-1 px-3 rounded-lg shadow-md z-50">
+        Prices are Exclusive of GST, 18% Extra
       </div>
     </header>
   );
