@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const TicketSelection = () => {
+const TicketSelection = (props) => {
   const [quantity, setQuantity] = useState(1);
 
   const handleIncrement = () => setQuantity(prev => prev + 1);
@@ -9,7 +9,7 @@ const TicketSelection = () => {
   return (
     <div className="p-6 flex-1 w-[60%] max-w-md mx-auto">
       <h2 className="text-xl md:text-2xl font-bold mb-4">Prizes</h2>
-      <div className="space-y-8">
+      <div className="space-y-8 flex flex-col justify-center">
         <div className="border p-4 rounded-lg shadow-md bg-gradient-to-r from-[#C58321] to-[#A85F09] text-white">
           <h3 className="text-lg font-semibold">ADULT</h3>
           <p className="text-sm">12 Years and above (Please carry ID proof)</p>
@@ -93,6 +93,10 @@ const TicketSelection = () => {
             </div>
           </div>
         </div>
+
+        <button className="w-full bg-red-600 text-white py-2 mt-2 rounded-lg block sm:hidden" onClick={() => props.date()}>
+          Select Date
+        </button>
       </div>
     </div>
   );

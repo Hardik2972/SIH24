@@ -4,7 +4,7 @@ import MuseumBookingPage from './components/MuseumBookingPage';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <MuseumBookingPage />
     </div>
   );

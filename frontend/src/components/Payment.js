@@ -16,7 +16,7 @@ const PaymentComponent = (props) => {
   return (
     <div className="bg-[#FFFFFF] p-6 md:p-12 border-2 border-gray-300 rounded-lg max-w-lg mx-auto">
       {/* Header */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mt-[-10px] mb-8">
         <h3 className="text-lg font-bold">
           Tickets for <span className="text-green-600">10:30 AM</span> on <span>26th August 2024</span>
         </h3>
