@@ -16,8 +16,8 @@ const ChatArea = ({ messages }) => {
         <div className="flex items-center justify-center text-center p-2">BUJJI</div>
     </div>
       {messages.map((msg, index) => (
-        <div key={index} className={`p-2 rounded-lg mb-2 ${msg.isUser ? 'bg-[#C5882E] text-right self-start' : 'bg-[#BBAC96] self-end'}`}>
-          {msg.text}
+        <div key={index} className={`flex p-1.5 rounded-lg mb-2 ${msg.isUser ? ' text-right justify-end' :'justify-start'}`}>
+          <div className={`inline-block p-1.5 rounded-lg mb-2 ${msg.isUser ? 'bg-[#C5882E] text-right self-start' : 'bg-[#BBAC96] self-end'}`}>{msg.text}</div>
         </div>
       ))}
     </div>

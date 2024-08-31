@@ -1,6 +1,8 @@
 import React from 'react';
 import { TfiWrite } from "react-icons/tfi";
 import { RiChatNewLine } from "react-icons/ri";
+import RightButton from './assets/RightButton';
+import LeftButton from './assets/LeftButton';
 const LeftPanel = () => {
   return (
     <div style={{
@@ -10,11 +12,13 @@ const LeftPanel = () => {
     }} className="flex flex-col items-center p-4 bg-[#BBAC96] w-full h-full rounded-lg shadow-md">
       {/* Icon Section */}
       <div className='flex w-full justify-between'>
-        <div className="flex items-center justify-center w-10 h-10 bg-[#C5882E] rounded-full mb-4 ml-1 ">
-          <TfiWrite />
+        <div className="p-2 flex items-center justify-center w-10 h-10 bg-[#C5882E] rounded-xl mb-4 ml-1 ">
+          {/* <TfiWrite /> */}
+          <LeftButton/>
         </div>
-        <div className="flex items-center justify-center w-10 h-10 bg-[#C5882E] rounded-full mb-4 mr-1">
-          <RiChatNewLine />
+        <div className="p-2 flex items-center justify-center w-10 h-10 bg-white rounded-xl mb-4 mr-1">
+          {/* <RiChatNewLine /> */}
+          <RightButton/>
         </div>
       </div>
       {/* Text Area */}
