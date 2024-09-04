@@ -1,6 +1,6 @@
 import React from 'react';
-import { TfiWrite } from "react-icons/tfi";
-import { RiChatNewLine } from "react-icons/ri";
+// import { TfiWrite } from "react-icons/tfi";
+// import { RiChatNewLine } from "react-icons/ri";
 import RightButton from './assets/RightButton';
 import LeftButton from './assets/LeftButton';
 const LeftPanel = () => {
