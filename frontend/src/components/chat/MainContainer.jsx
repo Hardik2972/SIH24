@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import CommentCard from './CommentCard';
+// import CommentCard from './CommentCard';
 import ChatInput from './ChatInput';
 import ChatArea from './ChatArea';
-import ProductCard from './ProductCard';
+// import ProductCard from './ProductCard';
 import LeftPanel from './LeftPanel';
 import RightPanel from './RightPanel';
-import {TfiWrite} from 'react-icons/tfi';
+// import {TfiWrite} from 'react-icons/tfi';
 import MyIcon from './assets/logo';
 const MainContainer = () => {
   const [messages, setMessages] = useState([]);
