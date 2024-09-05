@@ -7,6 +7,7 @@ import LeftPanel from './LeftPanel';
 import RightPanel from './RightPanel';
 // import {TfiWrite} from 'react-icons/tfi';
 import MyIcon from './assets/logo';
+import { TranslateToAny } from '../../assets/helper';
 
 const MainContainer = () => {
   const [messages, setMessages] = useState([]);
@@ -35,7 +36,7 @@ const MainContainer = () => {
         <div className="flex">
           <div className='p-1 w-2%'><MyIcon className="p-2"/></div>
           <div className='w-98%'>
-            {data.answer} {/* Assuming your API returns the model's output as `answer` */}
+            {data.answer} 
           </div>
         </div>
       );
