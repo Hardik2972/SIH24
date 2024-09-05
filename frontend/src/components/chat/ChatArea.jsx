@@ -13,7 +13,7 @@ const ChatArea = ({ messages }) => {
         <div className="flex items-center justify-center w-10 h-10mb-4 ml-1 ">
             <MyIcon/>
         </div>
-        <div className="flex items-center justify-center text-center p-2">BUJJI</div>
+        <div className="flex items-center justify-center text-center p-2">MELP Chat</div>
     </div>
       {messages.map((msg, index) => (
         <div key={index} className={`flex p-1.5 rounded-lg mb-2 ${msg.isUser ? ' text-right justify-end' :'justify-start'}`}>

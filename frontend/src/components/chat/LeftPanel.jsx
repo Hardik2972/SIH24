@@ -31,7 +31,10 @@ const LeftPanel = () => {
 
       {/* Static Comment Section */}
       <div className="w-full p-2 bg-white rounded-md shadow-md">
-        This comment goes for Ayush G.
+        Naional Museum chat.
+      </div>
+      <div className="w-full p-2 bg-white rounded-md shadow-md">
+        Science Museum chat.
       </div>
     </div>
   );

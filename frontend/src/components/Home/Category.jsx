@@ -1,3 +1,7 @@
+import himage1 from "./assets/himage1.jpg";
+import himage2 from "./assets/himage2.jpg";
+import himage3 from "./assets/himage3.jpg";
+import himage4 from "./assets/himage4.jpg";
 const Category = () => {
   return (
     <>
@@ -37,31 +41,36 @@ const Category = () => {
           <div className="max-md:flex max-md:flex-wrap grid grid-flow-row grid-cols-3 grid-rows-2 min-w-[65%] gap-5 ">
             {/* <GridComponent color="#DBF6FF" /> */}
 
-            <div className="bg-[#FCF8CC] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md ">
-              {" "}
-              <div className=" bg-red-500 bg-center rounded-full w-40 h-40"></div>
-              {/* bg-cover bg-no-repeat bg-[url('/hanumaan.png')] */}
+            <div className="bg-[#FCF8CC] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md">
+              <div
+                className="bg-cover bg-no-repeat bg-center rounded-full w-40 h-40"
+                style={{ backgroundImage:`url(${himage1})` }}
+              ></div>
               <p>Hanuman</p>
             </div>
 
-            <div className="bg-[#DBF6FF] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md ">
-              {" "}
-              <div className=" bg-red-500 bg-center rounded-full w-40 h-40"></div>
-              {/* bg-cover bg-no-repeat bg-[url('/hanumaan.png')] */}
+
+            <div className="bg-[#FCF8CC] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md">
+              <div
+                className="bg-cover bg-no-repeat bg-center rounded-full w-40 h-40"
+                style={{ backgroundImage: `url(${himage2})` }}
+              ></div>
               <p>Hanuman</p>
             </div>
 
-            <div className="bg-[#FFE7E8] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md ">
-              {" "}
-              <div className=" bg-red-500 bg-center rounded-full w-40 h-40"></div>
-              {/* bg-cover bg-no-repeat bg-[url('/hanumaan.png')] */}
+            <div className="bg-[#FCF8CC] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md">
+              <div
+                className="bg-cover bg-no-repeat bg-center rounded-full w-40 h-40"
+                style={{ backgroundImage: `url(${himage3})` }}
+              ></div>
               <p>Hanuman</p>
             </div>
 
-            <div className="bg-[#D3FFD8] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md ">
-              {" "}
-              <div className=" bg-red-500 bg-center rounded-full w-40 h-40"></div>
-              {/* bg-cover bg-no-repeat bg-[url('/hanumaan.png')] */}
+            <div className="bg-[#FCF8CC] flex-shirk h-1/2 min-h-60 max-w-[250px] flex flex-col items-center justify-center rounded-lg hover:shadow-md">
+              <div
+                className="bg-cover bg-no-repeat bg-center rounded-full w-40 h-40"
+                style={{ backgroundImage: `url(${himage4})` }}
+              ></div>
               <p>Hanuman</p>
             </div>
 

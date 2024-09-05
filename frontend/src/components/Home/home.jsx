@@ -4,7 +4,10 @@ import Header from "./header";
 import Promotion from "./Promotion";
 import Category from "./Category";
 import MuseumCard from "./Museum-Card";
-
+import image1 from "./assets/image1.jpg";
+import image2 from "./assets/image2.jpg";
+import image3 from "./assets/image3.jpg";
+import image4 from "./assets/image4.jpg";
 const MuseumHomepage = () => {
   return (
     <div className="font-sans bg-[#F4F2F2]">
@@ -31,7 +34,7 @@ const MuseumHomepage = () => {
             Offers
           </a>
           <a
-            href="/gpt"
+            href="/bot"
             className="border-t-2 border-solid p-4 border-white hover:border-black box-border"
           >
             ChatBot
@@ -55,10 +58,10 @@ const MuseumHomepage = () => {
         <section className="sm:m-4">
           <h2 className="text-3xl font-extrabold mb-2">69 Museum around you</h2>
           <div className="flex items-center max-md:flex-wrap max-sm:flex-col max-[500px]:flex-nowrap">
-            <MuseumCard />
-            <MuseumCard />
-            <MuseumCard />
-            <MuseumCard />
+            <MuseumCard imageSrc={image1} />
+            <MuseumCard imageSrc={image2} />
+            <MuseumCard imageSrc={image3} />
+            <MuseumCard imageSrc={image4} />
           </div>
         </section>
 
