@@ -1,6 +1,10 @@
+import { useState } from 'react'
+import ProfileDiv from './components/profile/ProfileDiv.jsx'
 import './App.css';
+import AdminDiv from './components/admin/AdminDiv.jsx'
 import MuseumBookingPage from './components/MuseumBookingPage';
 import MainContainer from './components/chat/MainContainer';
+
 function App() {
   return (
     <div>
@@ -9,5 +13,24 @@ function App() {
     </div>
   );
 }
+
+// function App()
+// {
+
+//   return (
+//     <>
+//       <ProfileDiv />
+//     </>
+//   )
+// }
+
+// function App() {
+//   return (
+//     <div>
+
+//       <AdminDiv/>
+//     </div>
+//   );
+// }
 
 export default App;
