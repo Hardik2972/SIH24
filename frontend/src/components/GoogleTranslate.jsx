@@ -15,7 +15,7 @@ const LanguageSelectorWithGoogleTranslate = () => {
     const initGoogleTranslate = () => {
       if (window.google && window.google.translate) {
         new window.google.translate.TranslateElement(
-          { pageLanguage: 'en', includedLanguages: 'en,fr,hi,es,de,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+          { pageLanguage: 'en', includedLanguages: 'en,pa,fr,mr,hi,es,de,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
           'google_translate_element'
         );
       }
