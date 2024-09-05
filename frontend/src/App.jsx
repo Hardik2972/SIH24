@@ -4,7 +4,9 @@ import VQA from './components/ImageUpload';
 import MuseumBookingPage from './components/MuseumBookingPage';
 import MainContainer from './components/chat/MainContainer';
 import Home from './components/Home/home';
-import ImageUploadComponent from './components/Image';
+import SelectLanguage from './components/GoogleTranslate';
+import { LanguageProvider } from './context/LanguageContext';
+
 function Root() {
   return (
     <Routes>
@@ -18,9 +20,12 @@ function Root() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Root />
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <SelectLanguage />
+        <Root />
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 
