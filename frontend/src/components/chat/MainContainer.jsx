@@ -11,8 +11,8 @@ import MyIcon from './assets/logo';
 const MainContainer = () => {
   const [messages, setMessages] = useState([]);
 
-  const handleSend = async (message) => {
-    setMessages([...messages, { text: message, isUser: true }]);
+  const handleSend = async (message, userInput) => {
+    setMessages([...messages, { text: userInput, isUser: true }]);
     
     try {
       // Simulate API call for model response
