@@ -30,6 +30,18 @@ const MuseumHomepage = () => {
           >
             Offers
           </a>
+          <a
+            href="/gpt"
+            className="border-t-2 border-solid p-4 border-white hover:border-black box-border"
+          >
+            ChatBot
+          </a>
+          <a
+            href="/booking"
+            className="border-t-2 border-solid p-4 border-white hover:border-black box-border"
+          >
+            Booking
+          </a>
         </div>
       </nav>
 

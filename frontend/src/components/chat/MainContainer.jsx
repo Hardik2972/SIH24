@@ -10,13 +10,15 @@ import MyIcon from './assets/logo';
 
 const MainContainer = () => {
   const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const handleSend = async (message) => {
     setMessages([...messages, { text: message, isUser: true }]);
-    
+    setLoading(true); // Start loading
+
     try {
       // Simulate API call for model response
-      const response = await fetch('https://diaogpt.onrender.com/predict', {
+      const response = await fetch('http://192.168.29.91:5000/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +35,7 @@ const MainContainer = () => {
         <div className="flex">
           <div className='p-1 w-2%'><MyIcon className="p-2"/></div>
           <div className='w-98%'>
-            {data.answer} {/* Assuming your API returns the model's output as `response` */}
+            {data.answer} {/* Assuming your API returns the model's output as `answer` */}
           </div>
         </div>
       );
@@ -43,6 +45,8 @@ const MainContainer = () => {
     } catch (error) {
       console.error('Error fetching model response:', error);
       setMessages((prevMessages) => [...prevMessages, { text: 'Network issues', isUser: false }]);
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -54,7 +58,11 @@ const MainContainer = () => {
       {/* Middle Column: Main Chat Area and Input */}
       <div className="flex flex-col w-full md:w-2/4">
         <ChatArea messages={messages} />
-        <ChatInput onSend={handleSend} />
+        {loading ? (
+          <div className="flex justify-center items-center p-4">Loading...</div>
+        ) : (
+          <ChatInput onSend={handleSend} />
+        )}
       </div>
       {/* Right Column: Model Output */}
       <div className="flex flex-col w-full md:w-1/4">
