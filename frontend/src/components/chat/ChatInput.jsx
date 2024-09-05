@@ -13,8 +13,9 @@ const ChatInput = ({ onSend }) => {
   const handleSend = async () => {
     if (message.trim()) {
       try {
+        console.log(language);
         const translatedMessage = await TranslateToAny(message, language, 'en');
-        // console.log(language, translatedMessage)
+        console.log(language, translatedMessage)
         if (translatedMessage !== null) {
           onSend(translatedMessage);
           setMessage('');
