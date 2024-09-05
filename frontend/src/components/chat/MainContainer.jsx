@@ -7,22 +7,43 @@ import LeftPanel from './LeftPanel';
 import RightPanel from './RightPanel';
 // import {TfiWrite} from 'react-icons/tfi';
 import MyIcon from './assets/logo';
+
 const MainContainer = () => {
   const [messages, setMessages] = useState([]);
 
-  const handleSend = (message) => {
-    setMessages([...messages, { text: message, isUser: true }]);
-    // Simulate model response
-    const modelResponse = (
-        <div className="flex ">
+  const handleSend = async (message, userInput) => {
+    setMessages([...messages, { text: userInput, isUser: true }]);
+    
+    try {
+      // Simulate API call for model response
+      const response = await fetch('https://diaogpt.onrender.com/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ "message": message }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      const modelResponse = (
+        <div className="flex">
           <div className='p-1 w-2%'><MyIcon className="p-2"/></div>
-          
           <div className='w-98%'>
-          {` ${message}`}
+            {data.answer} {/* Assuming your API returns the model's output as `response` */}
           </div>
         </div>
       );
-    setMessages((prevMessages) => [...prevMessages, { text: modelResponse, isUser: false }]);
+
+      // Update the message state with the model's response
+      setMessages((prevMessages) => [...prevMessages, { text: modelResponse, isUser: false }]);
+    } catch (error) {
+      console.error('Error fetching model response:', error);
+      setMessages((prevMessages) => [...prevMessages, { text: 'Network issues', isUser: false }]);
+    }
   };
 
   return (
@@ -31,12 +52,10 @@ const MainContainer = () => {
         <LeftPanel />
       </div>
       {/* Middle Column: Main Chat Area and Input */}
-      <div className="flex flex-col w-full md:w-2/4 ">
-        
+      <div className="flex flex-col w-full md:w-2/4">
         <ChatArea messages={messages} />
         <ChatInput onSend={handleSend} />
       </div>
-      
       {/* Right Column: Model Output */}
       <div className="flex flex-col w-full md:w-1/4">
         <RightPanel />

@@ -4,7 +4,7 @@ import VQA from './components/ImageUpload';
 import MuseumBookingPage from './components/MuseumBookingPage';
 import MainContainer from './components/chat/MainContainer';
 import Home from './components/Home/home';
-
+import ImageUploadComponent from './components/Image';
 function Root() {
   return (
     <Routes>
