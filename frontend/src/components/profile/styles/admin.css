@@ -1,0 +1,42 @@
+.admin-profile-box{
+    height: 100vh;
+    width:20rem;
+
+}
+
+.admin-profile-box.flex-div{
+    flex-direction: column;
+    /* align-items: normal; */
+    justify-content: flex-start;
+    color: white;
+    width: 20rem;
+}
+
+.admin-profile-box h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 3rem;
+}
+
+.admin-links div{
+    font-size: 1.5rem;
+    
+}
+
+.admin-links a{
+    padding: 0.6rem;
+}
+
+.admin-div{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.admin-links div{
+    cursor: pointer;
+}
+
+.admin-links div:hover{
+    background-color: black;
+}
